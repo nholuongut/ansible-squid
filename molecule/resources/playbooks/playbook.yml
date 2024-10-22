@@ -1,0 +1,15 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+  tasks:
+    - name: include custom whitelist
+      include_vars:
+        file: ../files/custom_whitelist.yml
+    - name: execute role
+      include_role:
+        name: stone-payments.squid
+      vars:
+        squid_custom_configs:
+          - "cache_mem 128 MB"
+        squid_diskcache: "aufs {{ squid_cache_dir }} 1000 16 256"

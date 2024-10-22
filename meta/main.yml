@@ -1,0 +1,25 @@
+galaxy_info:
+  author: Nho Luong
+  description: Squid for RedHat/CentOS/Debian/Ubuntu
+  company: Nho Luong
+
+  min_ansible_version: 2.5
+  molecule_version: 2.2.1
+  docker_version: 18.03.0-ce
+
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+
+  galaxy_tags:
+    - system
+    - proxy
+
+dependencies: []
